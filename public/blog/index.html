@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  
+  <style>
+        body {
+          margin: auto;
+          max-width: 700px;
+          min-width: 0;
+          padding: 0 10px 25px;
+          font-family: "Helvetica", "Arial", sans-serif;
+        }
+
+        h2 {
+          margin-top: 1em; 
+          padding-top: 1em;
+        }
+        
+        nav a {
+          margin-left: 20px;
+        }
+        
+        body {
+          color: #444;
+        }
+        
+        h1, h2, strong {
+          color: #222;
+        }
+        
+        header {
+          margin: Opx; font-size: 23px;
+        }
+        
+        article {
+          font-size: 16px;
+        }
+        
+        author {
+          font-size: 20px; letter-spacing: 1px;
+        }
+        
+        h1 {
+          font-size: 26px;
+        }
+        
+        h2 {
+          font-size: 23px;
+        }
+        
+        a {
+          color: #ffa64d;
+        }
+        
+        body {
+          display: grid; 
+          row-gap: 5px;
+          grid-template-columns: auto auto; 
+          grid-template-rows: 100px auto; 
+          grid-template-areas:
+            "header author"
+            "picture picture"
+            "abstract abstract"
+        }
+
+        picture {
+          grid-area: picture; 
+          justify-self: center; 
+          align-self: center;
+        }
+
+        header {
+          grid-area: header; 
+          justify-self: center; 
+          align-self: center;
+        }
+        
+        author {
+          grid-area: author; 
+          justify-self: center;
+          align-self: center;
+        }
+        
+        abstract {
+          grid-area: abstract; 
+          justify-self: center;
+          align-self: center;
+        }
+        
+        nav a {
+          text-align: right;
+        }
+        
+        article {
+          grid-area: ct;
+          border-top: 2px solid gray;
+        }
+        
+        @media screen and (max-width: 430px) {
+        body {
+          grid-template-columns: auto;
+          grid-template-rows: minmax (40px, auto) minmax (30px, auto) auto auto;
+          grid-template-areas:
+          "header"
+          "author"
+          "picture"
+          "abstract"
+        }
+        
+        header, author, picture, abstract {
+          text-align: center;
+          justify-self: center;
+        }
+        
+        
+        
+    </style>
+    
+  </head>
+
+<body>
+  
+
+<h1 class="title">
+  List of blog posts
+</h1>
+
+<ul>
+  
+  <li><a href="https://gosy.com/blog/second/">Brief History of Car Hacking</a></li>
+  
+  <li><a href="https://gosy.com/blog/first/">Introduction to the CAN Bus</a></li>
+  
+</ul>
+
+
+</body>
+
+</html>
