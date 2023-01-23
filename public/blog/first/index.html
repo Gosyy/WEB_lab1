@@ -1,0 +1,121 @@
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  
+  <style>
+        body {
+          margin: auto;
+          max-width: 700px;
+          min-width: 0;
+          padding: 0 10px 25px;
+          font-family: "Helvetica", "Arial", sans-serif;
+        }
+
+        h2 {
+          margin-top: 1em; 
+          padding-top: 1em;
+        }
+        
+        nav a {
+          margin-left: 20px;
+        }
+        
+        body {
+          color: #444;
+        }
+        
+        h1, h2, strong {
+          color: #222;
+        }
+        
+        header {
+          margin: Opx; font-size: 23px;
+        }
+        
+        article {
+          font-size: 16px;
+        }
+        
+        author {
+          font-size: 20px; letter-spacing: 1px;
+        }
+        
+        h1 {
+          font-size: 26px;
+        }
+        
+        h2 {
+          font-size: 23px;
+        }
+        
+        a {
+          color: #ffa64d;
+        }
+        
+        body {
+          display: grid; 
+          row-gap: 5px;
+          grid-template-columns: auto auto; 
+          grid-template-rows: 100px auto; 
+          grid-template-areas:
+            "header author"
+            "picture picture"
+            "abstract abstract"
+        }
+
+        picture {
+          grid-area: picture; 
+          justify-self: center; 
+          align-self: center;
+        }
+
+        header {
+          grid-area: header; 
+          justify-self: center; 
+          align-self: center;
+        }
+        
+        author {
+          grid-area: author; 
+          justify-self: center;
+          align-self: center;
+        }
+        
+        abstract {
+          grid-area: abstract; 
+          justify-self: center;
+          align-self: center;
+        }
+        
+        nav a {
+          text-align: right;
+        }
+        
+        article {
+          grid-area: ct;
+          border-top: 2px solid gray;
+        }
+        
+    </style>
+  
+
+
+<h1 class="title">
+  Introduction to the CAN Bus
+</h1>
+
+<p class="subtitle"><strong>2022-10-13</strong></p>
+
+<body>
+  <p><a href="templates/index.html">The main page</a></p>
+<p><a href="content/blog/_index.md">List of articles</a></p>
+<abstract>
+<p>The CAN (controller area network) bus in an automobile is the network that enables communication between the vehicle’s sensors and its various electronic control units (ECUs). Modern production cars can have as many as 70 or more ECUs (CSS Electronics, 2018), controlling the engine, airbags, anti-lock braking system, tail lights, entertainment system, and more. CAN itself is a message-based protocol standardized as CAN specification 2.0 in 1991 by multinational electronics and engineering company Bosch (Cook &amp; Freudenberg, 2008).</p>
+<p>The CAN bus in an automobile could be thought of as a noisy, crowded, slower version of a traditional Ethernet LAN (local area network), except that the traffic is mostly UDP (user datagram protocol), a connectionless transport protocol, rather than the TCP (transmission control protocol) traffic that dominates most web and client-server networks.</p>
+<p>It is worth noting that not all automobile control systems run over the CAN bus. In addition to multiple bus architectures for sensory and control automation, including LIN (local interconnect network), FlexRay, and MOST (media oriented system transport), there are several other networks present in modern automobiles (Wolf, Weimerskirch &amp; Paar, 2004). These network connections can include Bluetooth, GSM/LTE cellular network connections, GPS navigation, satellite radio as well as vendor-specific systems like OnStar. Proposals have also been made for more secure network messaging systems to protect critical functions. In one promising example, Schmandt, Sherman and Banerjee (2017) proposed a modified message authentication protocol to address security gaps in networks like the CAN bus, but automotive manufacturers have been slow to adopt these technologies.</p>
+<p>There are some advantages to using UDP for CAN bus automotive communications (Vector, 2016). For one, there are fewer communication delays and therefore less variation in communication timing because UDP does not require feedback from the receiver like TCP does. Another advantage is the ability to broadcast to all controllers and sensors in the controller area network, so that a change in an actuator, like the turn signal lever, can be reflected on the dashboard and carried out on the lighting circuit without requiring multiple direct wiring circuits. The CAN bus architecture allows all of these devices to communicate over as little as one pair of shared wires running to each sensor, actuator, or ECU.</p>
+<p>CAN bus protocol messages are small (eight bytes or less at a time), with no explicit addresses in the messages, just a priority value (messages from the engine or brakes get higher priority than the air conditioning or audio player). Although there is some integrity protection, in the form of a checksum, and availability protection in the form of error handling and retransmission of lost messages, the CAN bus protocol was not built with modern security controls in mind.</p>
+<abstract/>
+
+</body>
+
+
