@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<picture>
+<img src="https://i.pinimg.com/originals/86/8b/55/868b550b549641c2470178fff3472607.png" alt="car hacker" width="700" height="auto">
+</picture>
+
+<header>
+  Car Hacking. How safe is your car?
+</header>
+
+<author>
+  About author: 
+  <a href="{{ get_url(path="@/author.md") }}">Bryson R. Payne</a> </p>
+  Series of articles:
+  <a href="{{ get_url(path="@/blog/_index.md") }}">click </a>
+</author>
+
+<abstract>
+  <p> With the rapid adoption of internet-connected and driver-assist technologies, and the spread of semi- autonomous to self-driving cars on roads worldwide, cybersecurity for smart cars is a timely concern and one worth exploring both in the classroom and in the real world. Highly publicized hacks against production cars, and a relatively small number of crashes involving autonomous vehicles, have brought the issue of securing smart cars to the forefront as a matter of public and individual safet, and the cybersecurity of these “data centers on wheels” is of greater concern than ever. </p>
+  <p> However, up to this point there has been a steep learning curve involved in applying cybersecurity research to car hacking. The purpose of this paper is to present a clear, step-by-step process for creating a car-hacking research workstation and to give faculty, students, and researchers the ability to implement car hacking in their own courses and lab environments. This article describes the integration of a module on car hacking into a semester-long ethical hacking cybersecurity course, including full installation and setup of all the open-source tools necessary to implement the hands-on labs in similar courses. This work demonstrates how to test an automobile for vulnerabilities involving replay attacks, and how to reverse-engineer CAN bus messages, using a combination of open-source tools and a commodity CAN-to-USB cable or wireless connector for under $100 (USD). Also provided are an introduction to the CAN (controller area network) bus in modern automobiles and a brief history of car hacking. </p>
+</abstract>
+
+{% endblock content %}
